@@ -2,6 +2,12 @@ html {
   box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -49,10 +55,10 @@ h2 {
   line-height: 28px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+.wrapper {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .toolbar {
@@ -175,10 +181,4 @@ h2 {
   top: 614px;
   order: 3;
   margin: 58px 0;
-}
-
-.wrapper {
-  max-width: 375px;
-  margin: 0 auto;
-  padding: 0;
 }
