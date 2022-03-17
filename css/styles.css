@@ -49,18 +49,6 @@ h2 {
   line-height: 28px;
 }
 
-.nav-text {
-  position: static;
-  width: 90px;
-  height: 28px;
-  left: 12px;
-  top: 10px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #28352f;
-}
-
 *,
 *::before,
 *::after {
