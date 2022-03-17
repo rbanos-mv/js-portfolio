@@ -56,18 +56,22 @@ h2 {
 }
 
 .wrapper {
-  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
 }
 
 .toolbar {
-  max-width: 375px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1 0 0;
+  width: 375px;
   height: 48px;
+  margin: 44px 0 0 0;
 }
 
 .normal-button {
@@ -75,12 +79,10 @@ h2 {
   flex-direction: row;
   align-items: flex-start;
   padding: 8px;
-  position: absolute;
   width: 40px;
   height: 40px;
-  right: 24px;
-  top: calc(50% - 40px / 2);
   border-radius: 8px;
+  order: 1;
 }
 
 .icon {
@@ -96,11 +98,9 @@ h2 {
   flex-direction: row;
   align-items: center;
   padding: 10px 12px;
-  position: absolute;
   width: 114px;
   height: 48px;
-  left: 12px;
-  top: calc(50% - 48px / 2);
+  order: 0;
 }
 
 .logo-text {
@@ -121,44 +121,34 @@ h2 {
 .headline {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 64px 24px;
-  position: absolute;
-  width: 375px;
-  height: 726px;
-  left: 0;
-  top: 92px;
   flex: none;
   flex-grow: 0;
+  align-items: center;
+  padding: 64px 24px 0 24px;
+  width: 375px;
+  height: 655px;
   background-image: url("../images/header-illustration-mobile.svg");
   background-repeat: no-repeat;
   text-align: center;
 }
 
 .primary {
-  position: static;
   width: 327px;
   height: 192px;
-  left: 24px;
   order: 0;
 }
 
 .supporting-text {
-  position: static;
   width: 327px;
   height: 164px;
-  left: 24px;
-  top: 314px;
+  margin: 58px 0 0 0;
   order: 1;
-  margin: 58px 0;
 }
 
 .social-media {
-  position: static;
   width: 170.17px;
   height: 20px;
-  left: 102.42px;
-  top: 536px;
+  margin: 50px 0 0 0;
   order: 2;
 }
 
@@ -174,11 +164,8 @@ h2 {
 }
 
 .action {
-  position: static;
   width: 327px;
   height: 48px;
-  left: 24px;
-  top: 614px;
+  margin: 58px 0 0 0;
   order: 3;
-  margin: 58px 0;
 }
