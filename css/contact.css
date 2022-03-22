@@ -61,3 +61,12 @@ fieldset {
   padding: 10px;
   margin-bottom: 24px;
 }
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  width: 327px;
+  margin: 0;
+  color: #172b4d;
+}
+
