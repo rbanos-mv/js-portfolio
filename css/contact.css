@@ -12,7 +12,7 @@ input {
   width: 100%;
 }
 
-textarea{
+textarea {
   color: #091e42;
   border: 0;
   height: 90px;
@@ -77,3 +77,16 @@ fieldset {
   padding: 0;
 }
 
+.contact-email {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 17px;
+  margin-bottom: 0;
+  width: 327px;
+  height: 189px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #42526e;
+}
