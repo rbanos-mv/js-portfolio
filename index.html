@@ -207,14 +207,22 @@
           </ul>
         </section>
         <footer class="contact">
-          <form action="/login" method="post">
-            <input type="text" name="user_name" placeholder="Full name"/>
-            <input type="email" name="user_email" placeholder="Email address"/>
-            <textarea name="user_message" placeholder="Enter text here"> </textarea>
-            <div class="contact-action">
-              <button class="contact-button" type="submit">Get in touch</button>  
-            </div>
-          </form>
+          <div class="contact-container">
+            <form action="/login" method="post">
+              <fieldset class="fieldset" >
+                <input type="text" name="user_name" placeholder="Full name"/>
+              </fieldset>
+              <fieldset class="fieldset" >
+                <input type="email" name="user_email" placeholder="Email address"/>
+              </fieldset>
+              <fieldset class="fieldset" >
+                <textarea name="user_message" placeholder="Enter text here"></textarea>
+              </fieldset>
+              <div class="contact-action">
+                <button class="contact-button" type="submit">Get in touch</button>  
+              </div>
+            </form>
+          </div>
         </footer>
       </div>
     </body>
