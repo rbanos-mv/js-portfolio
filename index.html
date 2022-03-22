@@ -210,13 +210,13 @@
           <div class="contact-container">
             <form action="/login" method="post">
               <fieldset class="fieldset" >
-                <input type="text" name="user_name" placeholder="Full name"/>
+                <input type="text" name="user_name" placeholder="Full name" required maxlength="30" />
               </fieldset>
               <fieldset class="fieldset" >
-                <input type="email" name="user_email" placeholder="Email address"/>
+                <input type="email" name="user_email" placeholder="Email address" required />
               </fieldset>
               <fieldset class="fieldset" >
-                <textarea name="user_message" placeholder="Enter text here"></textarea>
+                <textarea name="user_message" placeholder="Enter text here" required maxlength="500"></textarea>
               </fieldset>
               <div class="contact-action">
                 <button class="contact-button" type="submit">Get in touch</button>  
