@@ -1,6 +1,6 @@
 input,
 textarea {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -90,4 +90,12 @@ fieldset {
   font-size: 20px;
   line-height: 32px;
   color: #42526e;
+}
+
+.home-indicator {
+  width: 134px;
+  height: 5px;
+  margin: 134px auto 8px auto;
+  background: #0d151e;
+  border-radius: 10px;
 }
