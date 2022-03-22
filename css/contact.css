@@ -70,3 +70,10 @@ fieldset {
   color: #172b4d;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+  padding: 0;
+}
+
