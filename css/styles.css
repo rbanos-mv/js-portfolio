@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -116,6 +116,12 @@ h2 {
   order: 0;
   flex-grow: 0;
   margin: 0 0;
+  transition: color 2s, transform 2s;
+}
+
+.logo-text:hover {
+  color: red;
+  transform: rotate(360deg);
 }
 
 .headline {

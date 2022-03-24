@@ -45,12 +45,25 @@
   color: white;
 }
 
-.about-button:active {
-  background: #008552;
+.about-button:hover {
+  animation-duration: 3s;
+  animation-name: zoom-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
 }
 
-.about-button:hover {
-  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+@keyframes zoom-in-out {
+  from {
+    font-size: 17px;
+  }
+
+  to {
+    font-size: 27px;
+  }
+}
+
+.about-button:active {
+  background: #008552;
 }
 
 .about-card {

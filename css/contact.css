@@ -54,6 +54,25 @@ textarea {
   letter-spacing: 0.03em;
   text-align: center;
   color: white;
+  transition: background 0.8s ease-in-out, color 0.8s ease-in-out;
+}
+
+.contact-button:hover {
+  background: green;
+  color: yellow;
+  animation-duration: 3s;
+  animation-name: zoomin;
+  animation-iteration-count: infinite;
+}
+
+@keyframes zoomin {
+  from {
+    font-size: 17px;
+  }
+
+  to {
+    font-size: 27px;
+  }
 }
 
 fieldset {
