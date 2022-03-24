@@ -60,9 +60,6 @@ textarea {
 .contact-button:hover {
   background: green;
   color: yellow;
-  /* font-size: 17px;
-}
-.about-button:hover { */
   animation-duration: 3s;
   animation-name: zoomin;
   animation-iteration-count: infinite;
