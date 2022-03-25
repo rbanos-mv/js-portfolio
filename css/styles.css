@@ -133,6 +133,7 @@ header {
   min-width: 375px;
   background-image: url("../images/header-illustration-mobile.svg");
   background-position: top center;
+  background-size: contain;
   background-repeat: no-repeat;
   text-align: center;
 }
