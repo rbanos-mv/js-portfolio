@@ -134,6 +134,7 @@ h4 {
 @media (min-width: 768px) {
   .recent-works {
     height: 48px;
+    margin-top: 495px;
   }
 
   .indicator {
