@@ -21,23 +21,32 @@ textarea {
 }
 
 .contact {
-  display: grid;
-  grid-gap: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 375px;
+  width: 100%;
   margin: 24px auto;
+  background-image: url("../images/illustration-contact-mobile.svg");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .contact-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  min-width: 327px;
+  width: 100%;
+  padding: 0 24px;
 }
 
 .contact-action {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
-  width: 327px;
+  min-width: 327px;
 }
 
 .contact-button {
@@ -84,8 +93,8 @@ fieldset {
 
 .contact-text {
   display: flex;
-  flex-direction: column;
-  width: 327px;
+  flex-direction: row;
+  min-width: 327px;
   margin: 0;
   color: #172b4d;
 }
@@ -93,6 +102,7 @@ fieldset {
 .contact-form {
   display: flex;
   flex-direction: column;
+  min-width: 327px;
   margin-top: 34px;
   padding: 0;
 }
@@ -117,4 +127,60 @@ fieldset {
   margin: 134px auto 8px auto;
   background: #0d151e;
   border-radius: 10px;
+}
+
+.bottom-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -6px;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    margin-top: 84px;
+    max-width: 1440px;
+    width: 100%;
+    padding: 0;
+    background-image: url("../images/illustration-contact-desktop.svg");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .contact-container {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1171px;
+    margin: 80px auto;
+  }
+
+  .contact-action {
+    justify-content: flex-start;
+  }
+
+  .contact-email {
+    display: none;
+  }
+
+  .contact-form {
+    min-width: 350px;
+    max-width: 684px;
+    width: 55%;
+    margin-top: 0;
+  }
+
+  .contact-text {
+    max-width: 463px;
+    font-size: 30px;
+    align-items: center;
+  }
+
+  .bottom-navigation {
+    margin-top: 145px;
+  }
+
+  .home-indicator {
+    display: none;
+  }
 }
