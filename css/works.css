@@ -16,9 +16,8 @@ h4 {
 .recent-works {
   display: flex;
   flex-direction: column;
-  width: 327px;
   height: 125px;
-  margin: 0;
+  padding: 0 30px;
 }
 
 .indicator {
@@ -31,7 +30,9 @@ h4 {
 
 .card-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 62px;
 }
 
@@ -128,4 +129,20 @@ h4 {
 
 .card-button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+@media (min-width: 768px) {
+  .recent-works {
+    height: 48px;
+  }
+
+  .indicator {
+    display: none;
+  }
+
+  .card-container {
+    max-width: 1171px;
+    margin-top: 28px;
+    justify-content: space-around;
+  }
 }
