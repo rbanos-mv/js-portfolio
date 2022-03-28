@@ -4,7 +4,6 @@
 
 > Showcase for my recent development projects
 
-
 ## Built With
 
 - Major languages: HTML, CSS
@@ -13,37 +12,42 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo Link](https://rbanos-mv.github.io/portfolio/)
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-* nodejs 12.x
-* npm - to install packages locally
+
+- nodejs 12.x
+- npm - to install packages locally
 
 ### Setup
-* git clone https://github.com/rbanos-mv/portfolio.git
+
+- git clone https://github.com/rbanos-mv/portfolio.git
 
 ### Install
-* cd portfolio
-* npm install
+
+- cd portfolio
+- npm install
 
 ### Usage
-N/A 
+
+N/A
 
 ### Lint code
-* npm run webhint
-* npm run stylelint
+
+- npm run webhint
+- npm run stylelint
 
 ### Run tests
+
 N/A
 
 ### Deployment
-N/A
 
+N/A
 
 ## Authors
 
