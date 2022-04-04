@@ -1,3 +1,8 @@
+const closeMenu = () => {
+  const menu = document.querySelector('.menu');
+  menu.remove();
+};
+
 const openMenu = () => {
   const menuDiv = document.querySelector('#menu-div');
 
@@ -13,6 +18,9 @@ const openMenu = () => {
   closeIcon.src = 'images/icon-cancel.svg';
   closeIcon.alt = 'menu icon';
   closeButton.appendChild(closeIcon);
+  closeButton.addEventListener('click', () => {
+    closeMenu();
+  });
 
   const menuList = document.createElement('ul');
   menuList.classList.add('menu-items');
