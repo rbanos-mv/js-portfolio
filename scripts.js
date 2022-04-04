@@ -31,6 +31,7 @@ const openMenu = () => {
   let anchor = document.createElement('a');
   anchor.href = '#works';
   anchor.textContent = 'Portfolio';
+  anchor.addEventListener('click', () => closeMenu());
   menuItem.appendChild(anchor);
   menuList.appendChild(menuItem);
 
@@ -39,6 +40,7 @@ const openMenu = () => {
   anchor = document.createElement('a');
   anchor.href = '#about';
   anchor.textContent = 'About';
+  anchor.addEventListener('click', () => closeMenu());
   menuItem.appendChild(anchor);
   menuList.appendChild(menuItem);
 
@@ -47,6 +49,7 @@ const openMenu = () => {
   anchor = document.createElement('a');
   anchor.href = '#contact';
   anchor.textContent = 'Contact';
+  anchor.addEventListener('click', () => closeMenu());
   menuItem.appendChild(anchor);
   menuList.appendChild(menuItem);
 };
