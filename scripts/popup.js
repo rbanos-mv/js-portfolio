@@ -1,3 +1,6 @@
+const mount = document.querySelector('#popup');
+mount.style.display = 'none'; // hide popup
+
 const projects = [
   {
     title: '1Multi-Post Stories Gain+Glory',
@@ -5,8 +8,8 @@ const projects = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
     imageUrl: 'images/popup-project.svg',
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    liveVersion: '',
-    source: '',
+    liveVersion: 'https://www.google.com/',
+    source: 'https://github.com/',
   },
   {
     title: '2Multi-Post Stories Gain+Glory',
@@ -62,11 +65,25 @@ const newElement = (type, classes = [], text = null) => {
   return element;
 };
 
+const closePopup = () => {
+  mount.style.display = 'none';
+  mount.removeChild(mount.firstChild);
+};
+
 const newImage = (url, alt) => {
-  const img = newElement('img');
+  const imgContainer = newElement('div', ['popup-img']);
+  const img = newElement('img', ['popup-pic']);
   img.src = url;
   img.alt = alt;
-  return img;
+  const btnDiv = newElement('div', ['popup-close']);
+  const btn = newElement('img');
+  btn.src = 'images/icon-cancel.svg';
+  btn.alt = 'Close button';
+  btn.addEventListener('click', () => closePopup());
+  btnDiv.appendChild(btn);
+  imgContainer.appendChild(btnDiv);
+  imgContainer.appendChild(img);
+  return imgContainer;
 };
 
 const newTechnologies = (technologies) => {
@@ -80,7 +97,9 @@ const newTechnologies = (technologies) => {
 const newButton = (text, url) => {
   const button = newElement('button', ['card-button'], text);
   button.type = 'button';
-  // button.addEventListener('click', () => openPopup(project));
+  button.addEventListener('click', () => {
+    window.location = url;
+  });
   return button;
 };
 
@@ -91,22 +110,16 @@ const newProjectButtons = (project) => {
   return div;
 };
 
-// const closePopup = () => {
-// }
-
 const openPopup = (project) => {
   const popup = newElement('div', ['popup-card']);
   popup.appendChild(newImage(project.imageUrl, 'project image'));
   popup.appendChild(newElement('h3', ['popup-title'], project.title));
   popup.appendChild(newTechnologies(project.technologies));
-  popup.appendChild(
-    newElement('p', ['popup-description'], project.description)
-  );
+  popup.appendChild(newElement('p', ['popup-description'], project.description));
   popup.appendChild(newProjectButtons(project));
   const mount = document.querySelector('#popup');
   mount.appendChild(popup);
   mount.style.display = 'block';
-  // mount.classList.remove('hidden');
 };
 
 const newActionButton = (text, project) => {
@@ -133,6 +146,3 @@ const cardContainer = document.querySelector('.card-container');
 for (const project of projects) {
   cardContainer.appendChild(newCard(project));
 }
-
-const mount = document.querySelector('#popup');
-mount.style.display = 'none'; // hide popup

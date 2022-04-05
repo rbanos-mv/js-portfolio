@@ -63,3 +63,23 @@
   max-width: 230px;
   width: 100%;
 }
+
+.popup-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.popup-close {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 40px;
+  padding-right: 16px;
+  z-index: 1;
+}
+
+.popup-pic {
+  margin-top: -40px;
+}
