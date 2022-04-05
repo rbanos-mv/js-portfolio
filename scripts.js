@@ -26,9 +26,9 @@ const openMenu = (img) => {
   const menuList = document.createElement('ul');
   menuList.classList.add('menu-items');
 
-  menuList.appendChild(newMenuItem('Portfolio', '#'));
-  menuList.appendChild(newMenuItem('About', '#'));
-  menuList.appendChild(newMenuItem('Contact', '#'));
+  menuList.appendChild(newMenuItem('Portfolio', '#works'));
+  menuList.appendChild(newMenuItem('About', '#about'));
+  menuList.appendChild(newMenuItem('Contact', '#contact'));
 
   const menu = document.createElement('div');
   menu.classList.add('menu');
