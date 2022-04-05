@@ -1,3 +1,12 @@
+const closeMenu = (img) => {
+  if (!img) img=document.querySelector('.menu-button img');
+  document.querySelector('.logo-text').textContent = 'Welcome';
+  img.src = 'images/icon-menu.svg';
+  img.alt = 'menu icon';
+  const menu = document.querySelector('.menu');
+  menu.remove();
+}
+
 const newMenuItem = (text, ref) => {
   let anchor = document.createElement('a');
   anchor.href = ref;
@@ -31,5 +40,7 @@ const openMenu = (img) => {
 document.querySelector('.menu-button').addEventListener('click', (event) => {
   if (event.target.alt === 'menu icon') {
     openMenu(event.target);
+  } else {
+    closeMenu(event.target);
   }
 });
