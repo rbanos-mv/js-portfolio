@@ -1,15 +1,15 @@
 .popup {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: block;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
   padding: 16px;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: black; /* Fallback color */
-  background-color: rgba(193 199 208 / 50%); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(193 199 208 / 50%);
 }
 
 .popup-card {
@@ -28,7 +28,7 @@
   margin-top: 16px;
   text-align: left;
   background: white;
-  color: #3a4a42;
+  color: #172b4d;
 }
 
 .popup-tags {
@@ -51,6 +51,39 @@
   color: #344563;
 }
 
+.popup-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  background: #36b37f;
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: white;
+  margin: 0 6px;
+}
+
+.ptag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 12px;
+  margin: 16px 4px;
+  background: #ebf0ee;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #344563;
+}
+
 .left {
   justify-content: flex-start;
 }
@@ -58,10 +91,8 @@
 .button-pair {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 230px;
-  width: 100%;
+  justify-content: center;
+  width: 90%;
 }
 
 .popup-img {
@@ -82,4 +113,50 @@
 
 .popup-pic {
   margin-top: -40px;
+}
+
+@media (min-width: 768px) {
+  .popup-card {
+    align-items: flex-start;
+  }
+
+  .popup-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .popup-tags {
+    margin-top: 0;
+  }
+
+  .popup-description {
+    margin-top: 76px;
+    order: 10;
+  }
+
+  .button-pair {
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: -95px;
+  }
+
+  .popup-button {
+    margin-left: 12px;
+    margin-right: 0;
+  }
+
+  .popup-img {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .popup-pic {
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+  }
 }

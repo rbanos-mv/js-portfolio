@@ -88,14 +88,14 @@ const newImage = (url, alt) => {
 
 const newTechnologies = (technologies) => {
   const list = newElement('ul', ['popup-tags', 'left']);
-  for (const tech of technologies) {
-    list.appendChild(newElement('li', ['tag'], tech));
-  }
+  technologies.forEach((tech) => {
+    list.appendChild(newElement('li', ['ptag'], tech));
+  });
   return list;
 };
 
 const newButton = (text, url) => {
-  const button = newElement('button', ['card-button'], text);
+  const button = newElement('button', ['popup-button'], text);
   button.type = 'button';
   button.addEventListener('click', () => {
     window.location = url;
@@ -115,7 +115,9 @@ const openPopup = (project) => {
   popup.appendChild(newImage(project.imageUrl, 'project image'));
   popup.appendChild(newElement('h3', ['popup-title'], project.title));
   popup.appendChild(newTechnologies(project.technologies));
-  popup.appendChild(newElement('p', ['popup-description'], project.description));
+  popup.appendChild(
+    newElement('p', ['popup-description'], project.description)
+  );
   popup.appendChild(newProjectButtons(project));
   const mount = document.querySelector('#popup');
   mount.appendChild(popup);
@@ -143,6 +145,6 @@ const newCard = (project) => {
 };
 
 const cardContainer = document.querySelector('.card-container');
-for (const project of projects) {
+projects.forEach((project) => {
   cardContainer.appendChild(newCard(project));
-}
+});
