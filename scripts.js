@@ -11,6 +11,7 @@ const newMenuItem = (text, ref) => {
   let anchor = document.createElement('a');
   anchor.href = ref;
   anchor.textContent = text;
+  anchor.addEventListener('click', () => closeMenu(null));
   let menuItem = document.createElement('li');
   menuItem.classList.add('menu-item');
   menuItem.appendChild(anchor);
