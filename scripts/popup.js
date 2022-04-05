@@ -62,6 +62,10 @@ const newElement = (type, classes = [], text = null) => {
   return element;
 };
 
+const openPopup = (project) => {
+  console.log('openPopup', project);
+};
+
 const newTechnologies = (technologies) => {
   const list = newElement('ul', ['card-tags']);
   for (const tech of technologies) {
@@ -70,9 +74,10 @@ const newTechnologies = (technologies) => {
   return list;
 };
 
-const newActionButton = (text) => {
+const newActionButton = (text, project) => {
   const actionBtn = newElement('button', ['card-button'], text);
   actionBtn.type = 'button';
+  actionBtn.addEventListener('click', () => openPopup(project));
   const action = newElement('div', ['card-action']);
   action.appendChild(actionBtn);
   return action;
