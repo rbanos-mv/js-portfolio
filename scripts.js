@@ -1,18 +1,18 @@
 const closeMenu = (img) => {
-  if (!img) img=document.querySelector('.menu-button img');
+  if (!img) img = document.querySelector('.menu-button img');
   document.querySelector('.logo-text').textContent = 'Welcome';
   img.src = 'images/icon-menu.svg';
   img.alt = 'menu icon';
   const menu = document.querySelector('.menu');
   menu.remove();
-}
+};
 
 const newMenuItem = (text, ref) => {
-  let anchor = document.createElement('a');
+  const anchor = document.createElement('a');
   anchor.href = ref;
   anchor.textContent = text;
   anchor.addEventListener('click', () => closeMenu(null));
-  let menuItem = document.createElement('li');
+  const menuItem = document.createElement('li');
   menuItem.classList.add('menu-item');
   menuItem.appendChild(anchor);
   return menuItem;
