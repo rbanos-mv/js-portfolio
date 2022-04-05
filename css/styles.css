@@ -41,6 +41,10 @@ h2 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .regular {
   font-weight: 400;
 }
@@ -48,6 +52,7 @@ h2 {
 header,
 nav {
   display: flex;
+  flex-direction: column;
   align-items: center;
   flex-grow: 0;
   min-width: 375px;
@@ -95,11 +100,16 @@ header {
   line-height: 28px;
   color: #28352f;
   transition: color 2s, transform 2s;
+  padding-left: 28px;
 }
 
 .logo-text:hover {
   color: red;
   transform: rotate(360deg);
+}
+
+.full-width {
+  width: 100%;
 }
 
 .menu-button {
@@ -109,6 +119,28 @@ header {
   justify-content: center;
   width: 40px;
   height: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 371px;
+  width: 100%;
+  height: 100vh;
+}
+
+.menu-items {
+  margin: 0;
+  padding: 0 28px;
+  width: 100%;
+}
+
+.menu-item {
+  min-width: 350px;
+  font-size: 28px;
+  line-height: 44px;
+  list-style: none;
 }
 
 .nav-item {

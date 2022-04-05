@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webhint": "npx hint .",
-    "stylelint": "npx stylelint **/*.{css,scss}"
+    "stylelint": "npx stylelint **/*.{css,scss}",
+    "eslint": "npx eslint ."
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,10 @@
   },
   "homepage": "https://github.com/rbanos-mv/portfolio#readme",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
     "hint": "^6.1.10",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
