@@ -136,6 +136,26 @@ fieldset {
   margin-top: -6px;
 }
 
+.error-div {
+  display: flex;
+  width: 100%;
+  background-color: #f47174;
+  border-radius: 8px;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+
+.error-message {
+  padding: 0 12px;
+  font-weight: bold;
+  color: white;
+  align-self: flex-start;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .contact {
     margin-top: 84px;
