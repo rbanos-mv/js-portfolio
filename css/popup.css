@@ -88,6 +88,10 @@
   justify-content: flex-start;
 }
 
+.ml-10 {
+  padding: 0 10px;
+}
+
 .button-pair {
   display: flex;
   flex-direction: row;

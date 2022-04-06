@@ -70,17 +70,28 @@ const closePopup = () => {
   mount.removeChild(mount.firstChild);
 };
 
+const newImgButton = (classes = [], src, alt, listener) => {
+  const btnDiv = newElement('div', classes);
+  const btn = newElement('img');
+  btn.src = src;
+  btn.alt = alt;
+  btn.addEventListener('click', listener);
+  btnDiv.appendChild(btn);
+
+  return btnDiv;
+};
+
 const newImage = (url, alt) => {
   const imgContainer = newElement('div', ['popup-img']);
   const img = newElement('img', ['popup-pic']);
   img.src = url;
   img.alt = alt;
-  const btnDiv = newElement('div', ['popup-close']);
-  const btn = newElement('img');
-  btn.src = 'images/icon-cancel.svg';
-  btn.alt = 'Close button';
-  btn.addEventListener('click', () => closePopup());
-  btnDiv.appendChild(btn);
+  const btnDiv = newImgButton(
+    ['popup-close'],
+    'images/icon-cancel.svg',
+    'Close button',
+    () => closePopup(),
+  );
   imgContainer.appendChild(btnDiv);
   imgContainer.appendChild(img);
   return imgContainer;
@@ -94,9 +105,9 @@ const newTechnologies = (technologies) => {
   return list;
 };
 
-const newButton = (text, url) => {
-  const button = newElement('button', ['popup-button'], text);
-  button.type = 'button';
+const newButton = (text, url, icon = null) => {
+  const button = newElement('div', ['popup-button'], text);
+  button.appendChild(newImgButton(['ml-10'], icon, 'button icon', null));
   button.addEventListener('click', () => {
     window.location = url;
   });
@@ -105,8 +116,12 @@ const newButton = (text, url) => {
 
 const newProjectButtons = (project) => {
   const div = newElement('div', ['button-pair']);
-  div.appendChild(newButton('See Live', project.liveVersion));
-  div.appendChild(newButton('See Source', project.source));
+  div.appendChild(
+    newButton('See Live', project.liveVersion, 'images/icon-export.svg'),
+  );
+  div.appendChild(
+    newButton('See Source', project.source, 'images/icon-github.svg'),
+  );
   return div;
 };
 
@@ -116,10 +131,9 @@ const openPopup = (project) => {
   popup.appendChild(newElement('h3', ['popup-title'], project.title));
   popup.appendChild(newTechnologies(project.technologies));
   popup.appendChild(
-    newElement('p', ['popup-description'], project.description)
+    newElement('p', ['popup-description'], project.description),
   );
   popup.appendChild(newProjectButtons(project));
-  const mount = document.querySelector('#popup');
   mount.appendChild(popup);
   mount.style.display = 'block';
 };
