@@ -1,5 +1,7 @@
 const form = document.querySelector('.contact-form');
+const formName = document.querySelector('#contact-name');
 const formEmail = document.querySelector('#contact-mail');
+const formMessage = document.querySelector('#contact-message');
 const errorDiv = document.querySelector('.error-div');
 const errorMessage = document.querySelector('.error-message');
 
