@@ -117,6 +117,8 @@
 
 .popup-pic {
   margin-top: -40px;
+  width: auto;
+  height: 250px;
 }
 
 @media (min-width: 768px) {
