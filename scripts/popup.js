@@ -3,19 +3,19 @@ mount.style.display = 'none'; // hide popup
 
 const projects = [
   {
-    title: '1Multi-Post Stories Gain+Glory',
+    title: 'To Do List',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    imageUrl: 'images/popup-project.svg',
-    technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
-    liveVersion: 'https://www.google.com/',
-    source: 'https://github.com/',
+      "'To-do list' is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.",
+    imageUrl: 'images/todo-01.png',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
+    liveVersion: 'https://rbanos-mv.github.io/todo-list/',
+    source: 'https://github.com/rbanos-mv/todo-list',
   },
   {
     title: '2Multi-Post Stories Gain+Glory',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    imageUrl: 'images/popup-project.svg',
+    imageUrl: 'images/back.png',
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
     liveVersion: 'https://www.google.com/',
     source: 'https://github.com/',
@@ -24,7 +24,7 @@ const projects = [
     title: '3Multi-Post Stories Gain+Glory',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    imageUrl: 'images/popup-project.svg',
+    imageUrl: 'images/back.png',
     technologies: ['Ruby on rails', 'css', 'JavaScript', 'html'],
     liveVersion: 'https://www.google.com/',
     source: 'https://github.com/',
@@ -86,12 +86,7 @@ const newImage = (url, alt) => {
   const img = newElement('img', ['popup-pic']);
   img.src = url;
   img.alt = alt;
-  const btnDiv = newImgButton(
-    ['popup-close'],
-    'images/icon-cancel.svg',
-    'Close button',
-    () => closePopup(),
-  );
+  const btnDiv = newImgButton(['popup-close'], 'images/icon-cancel.svg', 'Close button', () => closePopup());
   imgContainer.appendChild(btnDiv);
   imgContainer.appendChild(img);
   return imgContainer;
@@ -116,12 +111,8 @@ const newButton = (text, url, icon = null) => {
 
 const newProjectButtons = (project) => {
   const div = newElement('div', ['button-pair']);
-  div.appendChild(
-    newButton('See Live', project.liveVersion, 'images/icon-export.svg'),
-  );
-  div.appendChild(
-    newButton('See Source', project.source, 'images/icon-github.svg'),
-  );
+  div.appendChild(newButton('See Live', project.liveVersion, 'images/icon-export.svg'));
+  div.appendChild(newButton('See Source', project.source, 'images/icon-github.svg'));
   return div;
 };
 
@@ -130,9 +121,7 @@ const openPopup = (project) => {
   popup.appendChild(newImage(project.imageUrl, 'project image'));
   popup.appendChild(newElement('h3', ['popup-title'], project.title));
   popup.appendChild(newTechnologies(project.technologies));
-  popup.appendChild(
-    newElement('p', ['popup-description'], project.description),
-  );
+  popup.appendChild(newElement('p', ['popup-description'], project.description));
   popup.appendChild(newProjectButtons(project));
   mount.appendChild(popup);
   mount.style.display = 'block';
@@ -148,12 +137,16 @@ const newActionButton = (text, project) => {
 };
 
 const newCard = (project) => {
+  const cardImg = newElement('img');
+  cardImg.classList = ['popup-pic'];
+  cardImg.src = project.imageUrl;
   const cardContent = newElement('div', ['card-content']);
   cardContent.appendChild(newElement('h4', ['card-title'], project.title));
   cardContent.appendChild(newTechnologies(project.technologies));
   cardContent.appendChild(newActionButton('See Project', project));
 
   const card = newElement('div', ['card']);
+  card.appendChild(cardImg);
   card.appendChild(cardContent);
   return card;
 };
